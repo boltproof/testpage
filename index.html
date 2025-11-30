@@ -62,7 +62,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(245,247,251,0.98);
+      background: rgba(245,247,251,0.96);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid #E2E8F0;
       transition: background 0.25s ease, border-color 0.25s ease;
@@ -83,7 +83,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 0;
+      padding: 16px 0;
     }
 
     .nav-left {
@@ -98,7 +98,7 @@
     }
 
     .logo-wrap img {
-      height: 48px;
+      height: 80px;
       display: block;
     }
 
@@ -196,16 +196,113 @@
       color: #9CA3AF;
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
-      padding: 64px 0 40px;
+      padding: 72px 0 40px;
+      background:
+        radial-gradient(circle at top left, rgba(102,153,255,0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(56,189,248,0.18), transparent 60%),
+        var(--bg-soft);
+    }
+
+    body.dark .hero {
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(45,212,191,0.18), transparent 60%),
+        var(--bg-dark);
+    }
+
+    body.dark .hero-card-shell h1 {
+      text-shadow:
+        0 0 18px rgba(59,130,246,0.6),
+        0 0 40px rgba(34,197,94,0.35);
+    }
+
+    .scroll-down-wrapper {
+      margin-top: 26px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .scroll-down {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 58px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(148,163,184,0.9);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      opacity: 0.8;
+      transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .scroll-down:hover {
+      opacity: 1;
+      transform: translateY(2px);
+      border-color: rgba(59,130,246,0.9);
+    }
+
+    .scroll-down-arrow {
+      width: 6px;
+      height: 6px;
+      border-left: 2px solid rgba(15,23,42,0.9);
+      border-bottom: 2px solid rgba(15,23,42,0.9);
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 16px;
+      animation: scrollArrow 1.4s infinite ease-in-out;
+    }
+
+    body.dark .scroll-down {
+      border-color: rgba(51,65,85,0.9);
+    }
+
+    body.dark .scroll-down-arrow {
+      border-left-color: rgba(226,232,240,0.95);
+      border-bottom-color: rgba(226,232,240,0.95);
+    }
+
+    @keyframes scrollArrow {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.2;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translateY(14px) rotate(-45deg);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(0) rotate(-45deg);
+      }
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
       gap: 40px;
       align-items: center;
+    }
+
+    .hero-card-shell {
+      background: rgba(255,255,255,0.9);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.18);
+      border: 1px solid rgba(148,163,184,0.45);
+      backdrop-filter: blur(10px);
+    }
+
+    body.dark .hero-card-shell {
+      background: rgba(15,23,42,0.9);
+      border-color: rgba(30,64,175,0.9);
+      box-shadow: 0 24px 55px rgba(0,0,0,0.85);
     }
 
     .hero-tag {
@@ -213,7 +310,7 @@
       align-items: center;
       gap: 8px;
       font-size: 12px;
-      background: #E3ECFF;
+      background: rgba(227,236,255,0.9);
       color: var(--bolt-blue);
       padding: 4px 10px;
       border-radius: 999px;
@@ -224,12 +321,12 @@
     }
 
     body.dark .hero-tag {
-      background: #0F172A;
+      background: rgba(15,23,42,0.9);
       color: #93C5FD;
     }
 
     .hero-points {
-      margin: 18px 0;
+      margin: 16px 0 10px;
       padding: 0;
       list-style: none;
     }
@@ -251,13 +348,19 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 18px;
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .hero-card {
       background: var(--card-bg);
       border-radius: 14px;
-      padding: 16px 18px;
+      padding: 14px 16px;
       box-shadow: 0 10px 30px rgba(15,23,42,0.08);
       font-size: 14px;
       transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -285,7 +388,43 @@
       color: #9CA3AF;
     }
 
-    /* Grids & cards */
+    .stack-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:6px;
+    }
+
+    .stack-pill {
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.9);
+      border:1px solid rgba(148,163,184,0.6);
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .stack-pill span {
+      font-size:13px;
+    }
+
+    body.dark .stack-pill {
+      background:rgba(15,23,42,0.95);
+      border-color:rgba(51,65,85,0.9);
+    }
+
+    /* Cards & grids */
+    .section-alt {
+      background: radial-gradient(circle at top right, rgba(148,163,184,0.08), transparent 55%);
+    }
+
+    body.dark .section-alt {
+      background: radial-gradient(circle at top right, rgba(30,64,175,0.3), transparent 55%);
+    }
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -300,12 +439,20 @@
 
     .card {
       background: var(--card-bg);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 18px 18px 16px;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
       border: 1px solid #E5E7EB;
-      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.12s ease;
       font-size: 14px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+      border-color: rgba(148,163,184,0.9);
     }
 
     .card p {
@@ -319,8 +466,29 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.6);
     }
 
+    body.dark .card:hover {
+      border-color:#334155;
+      box-shadow:0 20px 60px rgba(0,0,0,0.9);
+    }
+
     body.dark .card p {
       color: #9CA3AF;
+    }
+
+    .card-icon {
+      width:32px;
+      height:32px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(227,236,255,0.9);
+      margin-bottom:8px;
+      font-size:17px;
+    }
+
+    body.dark .card-icon {
+      background:rgba(15,23,42,0.9);
     }
 
     .badge {
@@ -345,10 +513,34 @@
     .section-header {
       margin-bottom: 24px;
       max-width: 640px;
+      position:relative;
+    }
+
+    .section-kicker {
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.16em;
+      color:#9CA3AF;
+      margin-bottom:6px;
+    }
+
+    body.dark .section-kicker {
+      color:#6B7280;
+    }
+
+    .section-underline {
+      position:absolute;
+      bottom:-6px;
+      left:0;
+      width:64px;
+      height:3px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#3B82F6,#22C55E);
+      opacity:0.85;
     }
 
     .section-header p {
-      margin: 0;
+      margin: 10px 0 0;
       color: #4B5563;
     }
 
@@ -553,23 +745,25 @@
     <div class="container">
       <div class="hero-inner">
         <div>
-          <div class="hero-tag">Small environments · Solid foundations</div>
-          <h1>Calm, secure technology for small businesses and home offices.</h1>
-          <p class="muted">
-            BoltProof designs and manages Synology environments, backup, storage, networking,
-            Microsoft 365, websites, domains and remote access – so your digital world quietly stays under control.
-          </p>
-          <ul class="hero-points">
-            <li>✔ Deep expertise in Synology NAS design, backup and off-site replication.</li>
-            <li>✔ Stable networks and remote access without unnecessary complexity.</li>
-            <li>✔ Simple, well-structured websites, domains and domain-based email set up correctly from day one.</li>
-          </ul>
-          <div class="hero-actions">
-            <a href="https://cal.com/boltproof" class="btn btn-primary">Book a consultation</a>
-            <a href="https://wa.me/353892339862" class="btn btn-ghost">WhatsApp: +353 89 233 9862</a>
+          <div class="hero-card-shell">
+            <div class="hero-tag">Small environments · Solid foundations</div>
+            <h1>Calm, secure technology for small businesses and home offices.</h1>
+            <p class="muted">
+              BoltProof designs and manages Synology environments, backup, storage, networking,
+              Microsoft 365, websites, domains and remote access – so your digital world quietly stays under control.
+            </p>
+            <ul class="hero-points">
+              <li>✔ Deep expertise in Synology NAS design, backup and off-site replication.</li>
+              <li>✔ Stable networks and remote access without unnecessary complexity.</li>
+              <li>✔ Simple websites, domains and domain-based email set up correctly from day one.</li>
+            </ul>
+            <div class="hero-actions">
+              <a href="https://cal.com/boltproof" class="btn btn-primary">Book a consultation</a>
+              <a href="https://wa.me/353892339862" class="btn btn-ghost">WhatsApp: +353 89 233 9862</a>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="hero-side">
           <div class="hero-card">
             <div class="badge">What BoltProof covers</div>
             <ul>
@@ -581,16 +775,32 @@
               <li>Cloud workflows & general IT guidance</li>
             </ul>
           </div>
+          <div class="hero-card">
+            <div class="badge">Core stack</div>
+            <div class="stack-row">
+              <div class="stack-pill"><span>🧊</span> Synology & NAS</div>
+              <div class="stack-pill"><span>📧</span> Microsoft 365 & Email</div>
+              <div class="stack-pill"><span>🌐</span> Domains & DNS</div>
+              <div class="stack-pill"><span>📡</span> Networking & Remote Access</div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="scroll-down-wrapper">
+        <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+          <span class="scroll-down-arrow"></span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="section-alt">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">BoltProof</div>
         <h2>Who we are</h2>
+        <div class="section-underline"></div>
         <p>
           BoltProof is a specialist practice focused on small-environment infrastructure:
           Synology, backup, storage, networking, Microsoft 365 and core internet services.
@@ -599,6 +809,7 @@
       </div>
       <div class="grid-2">
         <div class="card">
+          <div class="card-icon">🧩</div>
           <h3>Approach</h3>
           <p>
             Every environment is treated as a small system: data, devices, identity, network and cloud.
@@ -607,6 +818,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🛡️</div>
           <h3>Principles</h3>
           <p>
             Security before convenience. Reliability over novelty. Minimal attack surface.
@@ -622,7 +834,9 @@
   <section id="services">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">Services</div>
         <h2>What BoltProof does</h2>
+        <div class="section-underline"></div>
         <p>
           Services are built around the core technical foundations that small environments depend on:
           resilient storage, clean identity and email, robust networking, and clear backup and recovery paths.
@@ -630,6 +844,7 @@
       </div>
       <div class="grid-3">
         <div class="card">
+          <div class="card-icon">💾</div>
           <h3>Backup & Recovery</h3>
           <p>
             Backup strategy design for small environments: encrypted local and remote backup flows, snapshots,
@@ -637,6 +852,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">📂</div>
           <h3>NAS & Storage Architecture</h3>
           <p>
             Planning and maintenance of Synology, QNAP or TrueNAS setups: SHR/RAID layouts, share design,
@@ -644,6 +860,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🧊</div>
           <h3>Synology Environments</h3>
           <p>
             Specialist Synology design and management: model selection, drive planning, DSM hardening,
@@ -651,6 +868,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">📡</div>
           <h3>Networking & Remote Access</h3>
           <p>
             Router and Wi-Fi optimisation, sensible network layouts, secure VPN and remote access,
@@ -658,28 +876,31 @@
           </p>
         </div>
         <div class="card">
-          <h3>Microsoft 365 & Email Infrastructure</h3>
+          <div class="card-icon">📧</div>
+          <h3>Microsoft 365 & Email</h3>
           <p>
             Tenant setup and alignment, domain and DNS configuration, Zoho Mail, Outlook and Gmail integrations,
             email deliverability tuning and structured use of shared mailboxes and identities.
           </p>
         </div>
         <div class="card">
-          <h3>Cloud Services & Remote Workflows</h3>
+          <div class="card-icon">☁️</div>
+          <h3>Cloud & Remote Workflows</h3>
           <p>
             OneDrive, Google Drive and Dropbox alignment, cloud-to-local backup strategies and
             secure multi-device workflows for small teams and individuals.
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🌐</div>
           <h3>Website, Domain & Email Setup</h3>
           <p>
-            Deployment of simple, modern brochure-style websites; domain registration and DNS;
-            domain-based email using Zoho Mail, Microsoft 365 or Google Workspace – all configured
-            cleanly and consistently.
+            Simple, modern brochure-style websites; domain registration and DNS;
+            domain-based email using Zoho Mail, Microsoft 365 or Google Workspace – all configured cleanly.
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🛠️</div>
           <h3>Advisory & Troubleshooting</h3>
           <p>
             Support for failed backups, misconfigured NAS, Wi-Fi issues, email problems, slow systems
@@ -691,10 +912,12 @@
   </section>
 
   <!-- SYNOLOGY SPECIALIST -->
-  <section id="synology">
+  <section id="synology" class="section-alt">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">Synology</div>
         <h2>Synology specialist</h2>
+        <div class="section-underline"></div>
         <p>
           Synology is one of BoltProof’s core strengths. The focus is on well-architected, secure
           and recoverable Synology deployments that integrate with the rest of the environment rather
@@ -703,6 +926,7 @@
       </div>
       <div class="grid-3">
         <div class="card">
+          <div class="card-icon">📦</div>
           <h3>Design & setup</h3>
           <p>
             Planning and deploying Synology NAS from scratch – model and drive selection,
@@ -711,6 +935,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🧬</div>
           <h3>Backup & resilience</h3>
           <p>
             Local and remote backups, snapshot replication, versioning strategies and ransomware-aware
@@ -718,6 +943,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">📈</div>
           <h3>Ongoing care & optimisation</h3>
           <p>
             Monitoring, DSM updates, security hardening, off-site replication checks, storage expansion
@@ -732,7 +958,9 @@
   <section id="how">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">Process</div>
         <h2>How it works</h2>
+        <div class="section-underline"></div>
         <p>
           Engagements follow a structured, engineering-led path rather than ad-hoc fixes.
           The aim is to leave each environment more understandable, more predictable and easier to support.
@@ -793,10 +1021,12 @@
   </section>
 
   <!-- SCENARIOS -->
-  <section id="scenarios">
+  <section id="scenarios" class="section-alt">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">Use cases</div>
         <h2>Typical scenarios</h2>
+        <div class="section-underline"></div>
         <p>
           BoltProof focuses on small but important environments where data loss or downtime would be painful,
           but full enterprise tooling would be overkill.
@@ -804,6 +1034,7 @@
       </div>
       <div class="grid-3">
         <div class="card">
+          <div class="card-icon">🏠</div>
           <h3>Home office environments</h3>
           <p>
             Multi-device backups, encrypted storage, stable Wi-Fi, secure remote access, structured folders
@@ -811,6 +1042,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">🏢</div>
           <h3>Small businesses</h3>
           <p>
             Centralised storage, controlled staff access, reliable email, simple internal sites or portals
@@ -818,6 +1050,7 @@
           </p>
         </div>
         <div class="card">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
           <h3>Personal & family setups</h3>
           <p>
             Document and photo archiving, private cloud access, clean domain email addresses,
@@ -832,7 +1065,9 @@
   <section id="contact">
     <div class="container">
       <div class="section-header">
+        <div class="section-kicker">Contact</div>
         <h2>Contact BoltProof</h2>
+        <div class="section-underline"></div>
         <p>
           For help with Synology, backups, storage, networking, Microsoft 365,
           websites, domains or general small-environment IT, use the details below.
@@ -840,6 +1075,7 @@
       </div>
       <div class="grid-2">
         <div class="card">
+          <div class="card-icon">📬</div>
           <h3>Contact details</h3>
           <p><strong>Email:</strong> <a href="mailto:elias@boltproof.com">elias@boltproof.com</a></p>
           <p><strong>Book a call:</strong> <a href="https://cal.com/boltproof">cal.com/boltproof</a></p>
@@ -847,6 +1083,7 @@
           <p>Remote support is available for most cases. On-site visits can be arranged where appropriate.</p>
         </div>
         <div class="card">
+          <div class="card-icon">📝</div>
           <h3>What helps in an initial message</h3>
           <p>It is useful to include:</p>
           <ul>
