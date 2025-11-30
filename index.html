@@ -5,6 +5,14 @@
   <title>BoltProof – Synology Specialist, Backup & Small-Environment IT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="BoltProof provides secure backup, Synology NAS design, networking, Microsoft 365, websites, domain setup and small-environment IT support for home offices and small businesses.">
+
+  <!-- Favicon & social preview -->
+  <link rel="icon" type="image/png" href="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png">
+  <meta property="og:title" content="BoltProof – Synology Specialist, Backup & Small-Environment IT">
+  <meta property="og:description" content="Secure backup, Synology environments, networking, Microsoft 365, websites, domains and small-environment IT support.">
+  <meta property="og:image" content="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png">
+  <meta property="og:type" content="website">
+
   <style>
     :root {
       --bolt-blue: #215EAB;
@@ -81,20 +89,17 @@
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: var(--bolt-blue);
+    .logo-wrap {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 18px;
+    }
+
+    .logo-wrap img {
+      height: 32px;
+      display: block;
     }
 
     .nav-links {
@@ -441,6 +446,37 @@
       background: #020617;
     }
 
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 999;
+      width: 62px;
+      height: 62px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+
+    body.dark .whatsapp-float {
+      box-shadow: 0 10px 32px rgba(0,0,0,0.55);
+    }
+
     @media (max-width: 880px) {
       .hero-inner {
         grid-template-columns: minmax(0, 1fr);
@@ -473,7 +509,10 @@
   <div class="container">
     <div class="nav">
       <div class="nav-left">
-        <div class="logo-mark">B</div>
+        <div class="logo-wrap">
+          <img src="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png"
+               alt="BoltProof logo">
+        </div>
         <div>
           <strong>BoltProof</strong><br>
           <span class="muted" style="font-size:12px;">Backup • Synology • Small-Environment IT</span>
@@ -515,7 +554,7 @@
           </ul>
           <div class="hero-actions">
             <a href="https://cal.com/boltproof" class="btn btn-primary">Book a consultation</a>
-            <a href="https://wa.me/" class="btn btn-ghost">WhatsApp for quick advice</a>
+            <a href="https://wa.me/YOURNUMBER" class="btn btn-ghost">WhatsApp for quick advice</a>
           </div>
         </div>
         <div>
@@ -765,7 +804,7 @@
           <h3>Contact details</h3>
           <p><strong>Email:</strong> <a href="mailto:contact@boltproof.com">contact@boltproof.com</a></p>
           <p><strong>Book a call:</strong> <a href="https://cal.com/boltproof">cal.com/boltproof</a></p>
-          <p><strong>WhatsApp:</strong> Add your WhatsApp link here.</p>
+          <p><strong>WhatsApp:</strong> add your preferred number or link here.</p>
           <p>Remote support available. On-site visits where appropriate.</p>
         </div>
         <div class="card">
@@ -788,6 +827,11 @@
     <div>Powered by BoltProof – secure backup, storage & Synology-first IT.</div>
   </div>
 </footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/YOURNUMBER" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <script>
   // Year in footer
