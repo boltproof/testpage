@@ -7,10 +7,10 @@
   <meta name="description" content="BoltProof provides secure backup, Synology NAS design, networking, Microsoft 365, websites, domain setup and small-environment IT support for home offices and small businesses.">
 
   <!-- Favicon & social preview -->
-  <link rel="icon" type="image/png" href="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png">
+  <link rel="icon" type="image/png" href="/assets/boltproof-logo.png">
   <meta property="og:title" content="BoltProof – Synology Specialist, Backup & Small-Environment IT">
   <meta property="og:description" content="Secure backup, Synology environments, networking, Microsoft 365, websites, domains and small-environment IT support.">
-  <meta property="og:image" content="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png">
+  <meta property="og:image" content="/assets/boltproof-logo.png">
   <meta property="og:type" content="website">
 
   <style>
@@ -98,7 +98,7 @@
     }
 
     .logo-wrap img {
-      height: 32px;
+      height: 48px;
       display: block;
     }
 
@@ -434,7 +434,7 @@
 
     footer {
       border-top: 1px solid #E5E7EB;
-      padding: 12px 0;
+      padding: 12px 0 18px;
       font-size: 12px;
       color: #6B7280;
       transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
@@ -444,6 +444,19 @@
       border-color: #1F2937;
       color: #9CA3AF;
       background: #020617;
+    }
+
+    .footer-row {
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:4px;
+    }
+
+    .footer-privacy {
+      font-size:11px;
+      opacity:0.9;
     }
 
     /* Floating WhatsApp button */
@@ -510,7 +523,8 @@
     <div class="nav">
       <div class="nav-left">
         <div class="logo-wrap">
-          <img src="https://github.com/boltproof/testpage/raw/main/assets/BoltProof%20Original%20Logo.png"
+          <img src="/assets/boltproof-logo.svg"
+               onerror="this.src='/assets/boltproof-logo.png'"
                alt="BoltProof logo">
         </div>
         <div>
@@ -548,21 +562,21 @@
             Microsoft 365, websites, domains and remote access – so your digital world quietly stays under control.
           </p>
           <ul class="hero-points">
-            <li>✔ Expertise in Synology NAS design, backup and off-site replication.</li>
-            <li>✔ Stable networks and remote access without complexity.</li>
-            <li>✔ Simple websites, domains and domain-based email set up properly.</li>
+            <li>✔ Deep expertise in Synology NAS design, backup and off-site replication.</li>
+            <li>✔ Stable networks and remote access without unnecessary complexity.</li>
+            <li>✔ Simple, well-structured websites, domains and domain-based email set up correctly from day one.</li>
           </ul>
           <div class="hero-actions">
             <a href="https://cal.com/boltproof" class="btn btn-primary">Book a consultation</a>
-            <a href="https://wa.me/YOURNUMBER" class="btn btn-ghost">WhatsApp for quick advice</a>
+            <a href="https://wa.me/353892339862" class="btn btn-ghost">WhatsApp: +353 89 233 9862</a>
           </div>
         </div>
         <div>
           <div class="hero-card">
             <div class="badge">What BoltProof covers</div>
             <ul>
-              <li>Synology NAS setup & maintenance</li>
-              <li>Backup & recovery design</li>
+              <li>Synology NAS setup & lifecycle management</li>
+              <li>Backup & recovery design and testing</li>
               <li>Networking & secure remote access</li>
               <li>Microsoft 365 & email infrastructure</li>
               <li>Simple websites, domains & DNS</li>
@@ -578,25 +592,28 @@
   <section id="about">
     <div class="container">
       <div class="section-header">
-        <h2>Who I am</h2>
+        <h2>Who we are</h2>
         <p>
-          My name is Elias, and BoltProof is built around a simple idea: technology should support your life – not complicate it.
-          I work directly with every client, with a focus on calm, careful and security-first solutions.
+          BoltProof is a specialist practice focused on small-environment infrastructure:
+          Synology, backup, storage, networking, Microsoft 365 and core internet services.
+          The goal is simple – stable, secure systems that quietly do their job.
         </p>
       </div>
       <div class="grid-2">
         <div class="card">
           <h3>Approach</h3>
           <p>
-            No tickets disappearing into a queue. Just clear communication and a methodical way of understanding how your
-            environment works before changing anything.
+            Every environment is treated as a small system: data, devices, identity, network and cloud.
+            Before anything is changed, BoltProof maps how things currently work, where the risks are,
+            and what “good” looks like for that specific setup.
           </p>
         </div>
         <div class="card">
           <h3>Principles</h3>
           <p>
-            Security-first, reliability over novelty, privacy & discretion, and long-term thinking rather than quick fixes.
-            As your devices and workflows evolve, I keep your foundations stable.
+            Security before convenience. Reliability over novelty. Minimal attack surface.
+            Clear, documented foundations, not guesswork. BoltProof focuses on predictable, well-structured
+            environments rather than quick fixes or one-off hacks.
           </p>
         </div>
       </div>
@@ -609,64 +626,66 @@
       <div class="section-header">
         <h2>What BoltProof does</h2>
         <p>
-          I focus on the essential technical foundations that small environments depend on.
-          Everything is designed around simplicity, security and smooth day-to-day use.
+          Services are built around the core technical foundations that small environments depend on:
+          resilient storage, clean identity and email, robust networking, and clear backup and recovery paths.
         </p>
       </div>
       <div class="grid-3">
         <div class="card">
           <h3>Backup & Recovery</h3>
           <p>
-            Synology backup design, encrypted local and remote backup flows, snapshots,
-            ransomware protection and regular test restores.
+            Backup strategy design for small environments: encrypted local and remote backup flows, snapshots,
+            ransomware-resilient policies and regular test restores so recovery is proven, not assumed.
           </p>
         </div>
         <div class="card">
           <h3>NAS & Storage Architecture</h3>
           <p>
-            Creation and maintenance of Synology, QNAP or TrueNAS setups, SHR/RAID planning,
-            secure shares, multi-device syncing and storage growth planning.
+            Planning and maintenance of Synology, QNAP or TrueNAS setups: SHR/RAID layouts, share design,
+            access control, storage growth planning and integration with existing devices and cloud services.
           </p>
         </div>
         <div class="card">
           <h3>Synology Environments</h3>
           <p>
-            Specialised expertise in Synology design, setup, security, snapshots, off-site replication,
-            DSM hardening, remote access and long-term care for stable performance.
+            Specialist Synology design and management: model selection, drive planning, DSM hardening,
+            snapshots, off-site replication, secure access and long-term lifecycle care for the platform.
           </p>
         </div>
         <div class="card">
           <h3>Networking & Remote Access</h3>
           <p>
-            Router & Wi-Fi optimisation, sensible network design, VPN access, multi-site connectivity
-            and stabilising unreliable networks.
+            Router and Wi-Fi optimisation, sensible network layouts, secure VPN and remote access,
+            multi-site connectivity and stabilising unreliable or fragile networks.
           </p>
         </div>
         <div class="card">
           <h3>Microsoft 365 & Email Infrastructure</h3>
           <p>
-            Tenant setup, domain & DNS configuration, Zoho Mail, Outlook and Gmail integrations,
-            email deliverability tuning, shared mailboxes and OneDrive/Teams alignment.
+            Tenant setup and alignment, domain and DNS configuration, Zoho Mail, Outlook and Gmail integrations,
+            email deliverability tuning and structured use of shared mailboxes and identities.
           </p>
         </div>
         <div class="card">
           <h3>Cloud Services & Remote Workflows</h3>
           <p>
-            OneDrive, Google Drive & Dropbox, cloud-to-local backup strategies and secure multi-device workflows.
+            OneDrive, Google Drive and Dropbox alignment, cloud-to-local backup strategies and
+            secure multi-device workflows for small teams and individuals.
           </p>
         </div>
         <div class="card">
           <h3>Website, Domain & Email Setup</h3>
           <p>
-            Simple, modern websites; domain registration & DNS; domain-based email on Zoho Mail,
-            Microsoft 365 or Google Workspace – all configured cleanly and securely.
+            Deployment of simple, modern brochure-style websites; domain registration and DNS;
+            domain-based email using Zoho Mail, Microsoft 365 or Google Workspace – all configured
+            cleanly and consistently.
           </p>
         </div>
         <div class="card">
           <h3>Advisory & Troubleshooting</h3>
           <p>
-            Support with failed backups, Wi-Fi issues, email problems, slow devices, and general
-            IT hygiene for homes & small businesses.
+            Support for failed backups, misconfigured NAS, Wi-Fi issues, email problems, slow systems
+            and general IT hygiene questions in small environments.
           </p>
         </div>
       </div>
@@ -679,30 +698,32 @@
       <div class="section-header">
         <h2>Synology specialist</h2>
         <p>
-          Synology is one of BoltProof’s core strengths. I design, configure and maintain Synology environments
-          for individuals, home offices and small businesses who want reliable storage and backup without drama.
+          Synology is one of BoltProof’s core strengths. The focus is on well-architected, secure
+          and recoverable Synology deployments that integrate with the rest of the environment rather
+          than sit in isolation.
         </p>
       </div>
       <div class="grid-3">
         <div class="card">
           <h3>Design & setup</h3>
           <p>
-            Planning and deploying Synology NAS from scratch – model selection, drives,
-            SHR/RAID layouts, folder structures, permissions and secure remote access.
+            Planning and deploying Synology NAS from scratch – model and drive selection,
+            SHR/RAID layouts, folder structures, access models and secure remote connectivity,
+            all aligned to how the environment actually operates.
           </p>
         </div>
         <div class="card">
           <h3>Backup & resilience</h3>
           <p>
-            Local & remote backups, snapshot replication, versioning and ransomware protection,
-            plus regular test restores for guaranteed recovery.
+            Local and remote backups, snapshot replication, versioning strategies and ransomware-aware
+            designs, combined with regular test restores to confirm that recovery paths are valid.
           </p>
         </div>
         <div class="card">
           <h3>Ongoing care & optimisation</h3>
           <p>
-            Monitoring, DSM updates, hardening, off-site replication, storage expansion and
-            performance tuning as your data grows.
+            Monitoring, DSM updates, security hardening, off-site replication checks, storage expansion
+            planning and performance tuning as data and usage patterns evolve.
           </p>
         </div>
       </div>
@@ -714,42 +735,59 @@
     <div class="container">
       <div class="section-header">
         <h2>How it works</h2>
-        <p>A simple, personal and transparent process with no contract complexity.</p>
+        <p>
+          Engagements follow a structured, engineering-led path rather than ad-hoc fixes.
+          The aim is to leave each environment more understandable, more predictable and easier to support.
+        </p>
       </div>
       <div class="steps">
         <div class="step">
           <div class="step-number"></div>
           <div class="step-content">
-            <h3>Conversation</h3>
-            <p>A call or WhatsApp chat to understand your environment and concerns.</p>
+            <h3>Discovery & conversation</h3>
+            <p>
+              Initial call or WhatsApp discussion to map out the current environment, key systems and primary risks.
+            </p>
           </div>
         </div>
         <div class="step">
           <div class="step-number"></div>
           <div class="step-content">
             <h3>Assessment</h3>
-            <p>A careful look at your Synology, backup, storage, networking and cloud setup.</p>
+            <p>
+              A focused review of Synology, backup, storage, networking, identity and cloud usage, identifying
+              weak points and inconsistencies.
+            </p>
           </div>
         </div>
         <div class="step">
           <div class="step-number"></div>
           <div class="step-content">
-            <h3>Plan</h3>
-            <p>A tailored plan built around you – no templates, no assumptions.</p>
+            <h3>Design & plan</h3>
+            <p>
+              A tailored design that fits the environment’s size and risk tolerance – not a generic template.
+              This includes target backup shape, storage layout and access patterns.
+            </p>
           </div>
         </div>
         <div class="step">
           <div class="step-number"></div>
           <div class="step-content">
             <h3>Implementation</h3>
-            <p>Clean configuration: backups, storage, networking, domains, email & remote access.</p>
+            <p>
+              Careful, documented changes across backups, storage, networking, domains, email and remote access,
+              with an emphasis on reversibility and minimal disruption.
+            </p>
           </div>
         </div>
         <div class="step">
           <div class="step-number"></div>
           <div class="step-content">
             <h3>Ongoing support</h3>
-            <p>Direct help whenever needed. No outsourcing. No tickets disappearing.</p>
+            <p>
+              Continued support and periodic reviews where required, ensuring the environment remains aligned
+              with how it is actually used day to day.
+            </p>
           </div>
         </div>
       </div>
@@ -761,28 +799,31 @@
     <div class="container">
       <div class="section-header">
         <h2>Typical scenarios</h2>
-        <p>Examples of the kinds of environments BoltProof supports.</p>
+        <p>
+          BoltProof focuses on small but important environments where data loss or downtime would be painful,
+          but full enterprise tooling would be overkill.
+        </p>
       </div>
       <div class="grid-3">
         <div class="card">
-          <h3>Home office</h3>
+          <h3>Home office environments</h3>
           <p>
-            Multi-device backups, encrypted storage, stable Wi-Fi,
-            secure remote access and domain-based email.
+            Multi-device backups, encrypted storage, stable Wi-Fi, secure remote access, structured folders
+            and domain-based email for professional communication from a home base.
           </p>
         </div>
         <div class="card">
-          <h3>Small business</h3>
+          <h3>Small businesses</h3>
           <p>
-            Centralised storage, staff access control, reliable email,
-            simple internal websites and documented backup strategies.
+            Centralised storage, controlled staff access, reliable email, simple internal sites or portals
+            and documented backup and recovery expectations for owners and key staff.
           </p>
         </div>
         <div class="card">
           <h3>Personal & family setups</h3>
           <p>
-            Document archiving, private cloud, domain emails, shared family storage
-            and easy-to-use security everywhere.
+            Document and photo archiving, private cloud access, clean domain email addresses,
+            shared family storage and practical, easy-to-use security for non-technical users.
           </p>
         </div>
       </div>
@@ -793,10 +834,10 @@
   <section id="contact">
     <div class="container">
       <div class="section-header">
-        <h2>Get in touch</h2>
+        <h2>Contact BoltProof</h2>
         <p>
-          If you’d like help with Synology, backups, storage, networking, Microsoft 365,
-          websites, domains or general small-environment IT, reach out.
+          For help with Synology, backups, storage, networking, Microsoft 365,
+          websites, domains or general small-environment IT, use the details below.
         </p>
       </div>
       <div class="grid-2">
@@ -804,16 +845,16 @@
           <h3>Contact details</h3>
           <p><strong>Email:</strong> <a href="mailto:contact@boltproof.com">contact@boltproof.com</a></p>
           <p><strong>Book a call:</strong> <a href="https://cal.com/boltproof">cal.com/boltproof</a></p>
-          <p><strong>WhatsApp:</strong> add your preferred number or link here.</p>
-          <p>Remote support available. On-site visits where appropriate.</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/353892339862">+353 89 233 9862</a></p>
+          <p>Remote support is available for most cases. On-site visits can be arranged where appropriate.</p>
         </div>
         <div class="card">
-          <h3>What to include</h3>
-          <p>It helps if you mention:</p>
+          <h3>What helps in an initial message</h3>
+          <p>It is useful to include:</p>
           <ul>
-            <li>Your environment (home office, small business, personal)</li>
-            <li>Your main concerns (backup, storage, email, website, network, etc.)</li>
-            <li>Any existing Synology or cloud tools you use</li>
+            <li>Whether the environment is home office, small business or personal/family</li>
+            <li>The main concerns (backup, storage, email, website, network, access, etc.)</li>
+            <li>Any existing Synology, NAS, cloud or backup tools currently in use</li>
           </ul>
         </div>
       </div>
@@ -822,14 +863,19 @@
 </main>
 
 <footer>
-  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-    <div>© <span id="year"></span> BoltProof. All rights reserved.</div>
-    <div>Powered by BoltProof – secure backup, storage & Synology-first IT.</div>
+  <div class="container">
+    <div class="footer-row">
+      <div>© <span id="year"></span> BoltProof. All rights reserved.</div>
+      <div>Powered by BoltProof – secure backup, storage & Synology-first IT.</div>
+    </div>
+    <div class="footer-privacy">
+      <strong>Privacy & Cookies:</strong> BoltProof uses only essential cookies for basic site functionality. No tracking or analytics cookies are used.
+    </div>
   </div>
 </footer>
 
 <!-- Floating WhatsApp button -->
-<a href="https://wa.me/YOURNUMBER" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/353892339862" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
